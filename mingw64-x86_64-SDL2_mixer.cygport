@@ -2,7 +2,7 @@ CROSS_HOST="x86_64-w64-mingw32"
 inherit cross
 
 NAME="mingw64-x86_64-SDL2_mixer"
-VERSION=2.0.1
+VERSION=2.0.2
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="SDL2 audio loading library for Win64 toolchain"
@@ -24,7 +24,8 @@ NO_LIBTOOLIZE=1
 ACLOCAL_FLAGS="-I acinclude"
 
 CYGCONF_ARGS="
-	--disable-music-mp3
 	--enable-music-midi-native
 	--disable-music-midi-timidity
+	--disable-music-mp3-smpeg
+	--disable-music-mp3-mad-gpl
 "
